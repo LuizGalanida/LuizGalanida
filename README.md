@@ -12,16 +12,17 @@ mv node_modules/mathjax/es5 <path-to-server-location>/mathjax
 
 ## 1. Overview
 
+
 This project investigates the **singularities** or **ambiguities** that arise in three widely used attitude representations:
 
 1. **3–2–1 Euler Angles**  
-   - Exhibits singularities when the middle angle \(\theta\) approaches \(\pm 90^\circ\).
+   - Exhibits singularities when the middle angle $(\theta)$ approaches $(\pm 90^\circ\)$.
 2. **Euler Parameters (Quaternions)**  
-   - Has a \(\pm \mathbf{q}\) ambiguity, which still represents the same physical orientation.
+   - Has a $(\pm \mathbf{q}\)$ ambiguity, which still represents the same physical orientation.
 3. **Classical Rodrigues Parameters**  
-   - Goes to infinity if the total rotation angle is \(180^\circ\) (i.e., \(\Phi = \pi\)).
+   - Goes to infinity if the total rotation angle is $(180^\circ\)$ (i.e., $\Phi$ = $\pi$).
 
-We **numerically integrate** simple kinematic equations, driven by a **time‐varying angular velocity** \(\boldsymbol{\omega}(t)\), specifically chosen to nudge each representation near its problematic region. Three ODE solvers are used:
+We **numerically integrate** simple kinematic equations, driven by a **time‐varying angular velocity** $(\boldsymbol{\omega}(t)\)$, specifically chosen to nudge each representation near its problematic region. Three ODE solvers are used:
 
 - `ode45` – a non‐stiff variable‐step solver,  
 - `ode15s` – a stiff (but still variable‐step) solver,  
@@ -47,3 +48,4 @@ Keep the **total ZIP** size **≤ 100 MB**.
 3. Type:
    ```matlab
    >> main
+   
